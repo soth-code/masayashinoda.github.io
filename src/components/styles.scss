@@ -1,3 +1,17 @@
+//import
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Marcellus&family=Martel:wght@400;600;700;900&display=swap");
+
+//vars
+$font-heading: "Jacques Francois", serif;
+$font-subhead: "Martel", serif;
+$font-body: "Marcellus", serif;
+$clr-primary: #183152;
+$clr-sceondary: #244979;
+$clr-white-darker: #c4d7ed;
+$clr-white: #eef4fb;
+$desktop-bp: 1024px;
+$tablet-bp: 1023px;
+$mobile-bp: 480px;
 html {
   scroll-behavior: smooth;
 }
@@ -6,25 +20,53 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-//vars
-$clr-primary: #183152;
-$clr-sceondary: #244979;
-$clr-white-darker: #c4d7ed;
-$clr-white: #eef4fb;
-$desktop-bp: 1024px;
-$tablet-bp: 1023px;
-$mobile-bp: 480px;
 
 //global
 body {
   .parent {
     display: flex;
     height: 100vh; //debug
+    //fonts
+    h1 {
+      font-family: $font-heading;
+      font-size: 36px;
+    }
+    h2 {
+      font-family: $font-subhead;
+      font-size: 21px;
+    }
+    p {
+      font-family: $font-body;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    a {
+      font-family: $font-body;
+      font-size: 18px;
+      color: adjust-hue($clr-primary, 25%);
+    }
+    //link
+    a {
+      //border-bottom: 2px solid $clr-white-darker;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      p {
+        margin: 0;
+        margin-left: 0.5vmax;
+      }
+    }
+    a:nth-of-type(even) {
+      margin-left: 1.25vmax;
+    }
     //font color
     h1,
-    h2,
-    p {
+    p,
+    a {
       color: $clr-white;
+    }
+    h2 {
+      color: $clr-white-darker;
     }
     .layout-left,
     .layout-right {
@@ -57,11 +99,18 @@ body {
         justify-content: flex-end;
         div {
           width: 65%;
-          margin-top: 0.75vmax;
+          margin-top: 0.5vmax;
           justify-content: flex-start;
+          p {
+            margin-bottom: 0.5vmax;
+          }
           footer {
             display: flex;
             flex-direction: column;
+            nav {
+              display: flex;
+              align-items: center;
+            }
           }
         }
       }
@@ -107,5 +156,9 @@ body {
 header {
   img {
     width: 6.25vmax;
+  }
+  nav {
+    display: flex;
+    align-items: center;
   }
 }

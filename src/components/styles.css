@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Marcellus&family=Martel:wght@400;600;700;900&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -16,10 +17,55 @@ body .parent {
   height: 100vh;
 }
 
-body .parent h1,
-body .parent h2,
+body .parent h1 {
+  font-family: "Jacques Francois", serif;
+  font-size: 36px;
+}
+
+body .parent h2 {
+  font-family: "Martel", serif;
+  font-size: 21px;
+}
+
 body .parent p {
+  font-family: "Marcellus", serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+body .parent a {
+  font-family: "Marcellus", serif;
+  font-size: 18px;
+  color: #181952;
+}
+
+body .parent a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .parent a p {
+  margin: 0;
+  margin-left: 0.5vmax;
+}
+
+body .parent a:nth-of-type(even) {
+  margin-left: 1.25vmax;
+}
+
+body .parent h1,
+body .parent p,
+body .parent a {
   color: #eef4fb;
+}
+
+body .parent h2 {
+  color: #c4d7ed;
 }
 
 body .parent .layout-left,
@@ -77,10 +123,14 @@ body .parent .layout-left .margins-bottom {
 
 body .parent .layout-left .margins-bottom div {
   width: 65%;
-  margin-top: 0.75vmax;
+  margin-top: 0.5vmax;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+body .parent .layout-left .margins-bottom div p {
+  margin-bottom: 0.5vmax;
 }
 
 body .parent .layout-left .margins-bottom div footer {
@@ -91,6 +141,15 @@ body .parent .layout-left .margins-bottom div footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+body .parent .layout-left .margins-bottom div footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 1023px) {
@@ -142,5 +201,14 @@ body .parent .layout-right .margins {
 
 header img {
   width: 6.25vmax;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

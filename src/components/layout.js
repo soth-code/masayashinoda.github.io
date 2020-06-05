@@ -16,6 +16,10 @@ import Header from "./header"
 import "./reset.css"
 import "./styles.css"
 
+//fa import
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -47,10 +51,17 @@ const Layout = ({ children }) => {
           <div>
             <footer>
               <div>
-                <p>
-                  You might be interested in
-                  <section>© {new Date().getFullYear()}</section>
-                </p>
+                <p>You might be interested in my other sites:</p>
+                <nav>
+                  <Link to="https://masayaphoto.netlify.app">
+                    <FontAwesomeIcon icon={faCoffee} />
+                    <p>Photography</p>
+                  </Link>
+                  <Link to="https://masayablog.netlify.app">
+                    <FontAwesomeIcon icon={faCoffee} />
+                    <p>Blog</p>
+                  </Link>
+                </nav>
               </div>
             </footer>
           </div>
