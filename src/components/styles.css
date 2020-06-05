@@ -77,7 +77,7 @@ body .parent .layout-left .margins-bottom {
 
 body .parent .layout-left .margins-bottom div {
   width: 65%;
-  margin-top: 1.25vmax;
+  margin-top: 0.75vmax;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
