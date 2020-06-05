@@ -1,0 +1,111 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//vars
+$clr-primary: #183152;
+$clr-sceondary: #244979;
+$clr-white-darker: #c4d7ed;
+$clr-white: #eef4fb;
+$desktop-bp: 1024px;
+$tablet-bp: 1023px;
+$mobile-bp: 480px;
+
+//global
+body {
+  .parent {
+    display: flex;
+    height: 100vh; //debug
+    //font color
+    h1,
+    h2,
+    p {
+      color: $clr-white;
+    }
+    .layout-left,
+    .layout-right {
+      //desktop
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .layout-left {
+      align-items: flex-end;
+      border: 1px solid red; //debug
+      width: 40vw;
+      background: $clr-primary;
+      .margins {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 75%;
+        width: 65%;
+        border: 2px solid green; //debug
+        padding-right: 1.25vmax;
+        margin-top: 15vh;
+      }
+      //footer
+      .margins-bottom {
+        width: 100%;
+        height: 25%;
+        background: $clr-sceondary;
+        display: flex;
+        justify-content: flex-end;
+        div {
+          width: 65%;
+          margin-top: 1.25vmax;
+          justify-content: flex-start;
+          footer {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      @media (max-width: $tablet-bp) {
+        .margins {
+          width: 90%;
+        }
+      }
+    }
+    .layout-right {
+      align-items: flex-start;
+      border: 1px solid blue; //debug
+      width: 60vw;
+      .margins {
+        height: 75vh;
+        width: 65%;
+        margin-left: 5vmax;
+        border: 2px solid yellow; //debug
+      }
+      @media (max-width: $tablet-bp) {
+        .margins {
+          width: 90%;
+        }
+      }
+    }
+  }
+  @media (max-width: $tablet-bp) {
+    .parent {
+      flex-direction: column;
+      width: 90%;
+    }
+  }
+  @media (max-width: $mobile-bp) {
+    .parent {
+      flex-direction: column;
+      width: 90%;
+    }
+  }
+}
+
+//header
+header {
+  img {
+    width: 6.25vmax;
+  }
+}
