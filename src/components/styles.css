@@ -36,7 +36,6 @@ body .parent p {
 body .parent a {
   font-family: "Marcellus", serif;
   font-size: 18px;
-  color: #181952;
 }
 
 body .parent a {
@@ -52,6 +51,7 @@ body .parent a {
 body .parent a p {
   margin: 0;
   margin-left: 0.5vmax;
+  color: #ecf4fd;
 }
 
 body .parent a:nth-of-type(even) {
@@ -86,7 +86,6 @@ body .parent .layout-left {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 1px solid red;
   width: 40vw;
   background: #183152;
 }
@@ -103,8 +102,7 @@ body .parent .layout-left .margins {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 75%;
-  width: 65%;
-  border: 2px solid green;
+  width: 70%;
   padding-right: 1.25vmax;
   margin-top: 15vh;
 }
@@ -122,15 +120,11 @@ body .parent .layout-left .margins-bottom {
 }
 
 body .parent .layout-left .margins-bottom div {
-  width: 65%;
+  width: 70%;
   margin-top: 0.5vmax;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-
-body .parent .layout-left .margins-bottom div p {
-  margin-bottom: 0.5vmax;
 }
 
 body .parent .layout-left .margins-bottom div footer {
@@ -144,6 +138,7 @@ body .parent .layout-left .margins-bottom div footer {
 }
 
 body .parent .layout-left .margins-bottom div footer nav {
+  margin-top: -0.75vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,13 +157,12 @@ body .parent .layout-right {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border: 1px solid blue;
   width: 60vw;
 }
 
 body .parent .layout-right .margins {
   height: 75vh;
-  width: 65%;
+  width: 70%;
   margin-left: 5vmax;
   border: 2px solid yellow;
 }

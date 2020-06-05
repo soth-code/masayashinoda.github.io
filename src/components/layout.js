@@ -18,7 +18,8 @@ import "./styles.css"
 
 //fa import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { faCamera } from "@fortawesome/free-solid-svg-icons"
+import { faBlog } from "@fortawesome/free-solid-svg-icons"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -54,11 +55,11 @@ const Layout = ({ children }) => {
                 <p>You might be interested in my other sites:</p>
                 <nav>
                   <Link to="https://masayaphoto.netlify.app">
-                    <FontAwesomeIcon icon={faCoffee} />
+                    <FontAwesomeIcon icon={faCamera} />
                     <p>Photography</p>
                   </Link>
                   <Link to="https://masayablog.netlify.app">
-                    <FontAwesomeIcon icon={faCoffee} />
+                    <FontAwesomeIcon icon={faBlog} />
                     <p>Blog</p>
                   </Link>
                 </nav>

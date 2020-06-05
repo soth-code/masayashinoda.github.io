@@ -43,7 +43,6 @@ body {
     a {
       font-family: $font-body;
       font-size: 18px;
-      color: adjust-hue($clr-primary, 25%);
     }
     //link
     a {
@@ -54,6 +53,7 @@ body {
       p {
         margin: 0;
         margin-left: 0.5vmax;
+        color: saturate($clr-white, 15%);
       }
     }
     a:nth-of-type(even) {
@@ -77,18 +77,18 @@ body {
     }
     .layout-left {
       align-items: flex-end;
-      border: 1px solid red; //debug
       width: 40vw;
       background: $clr-primary;
+      //border: 1px solid red; //debug
       .margins {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 75%;
-        width: 65%;
-        border: 2px solid green; //debug
+        width: 70%;
         padding-right: 1.25vmax;
         margin-top: 15vh;
+        //border: 2px solid green; //debug
       }
       //footer
       .margins-bottom {
@@ -98,16 +98,14 @@ body {
         display: flex;
         justify-content: flex-end;
         div {
-          width: 65%;
+          width: 70%;
           margin-top: 0.5vmax;
           justify-content: flex-start;
-          p {
-            margin-bottom: 0.5vmax;
-          }
           footer {
             display: flex;
             flex-direction: column;
             nav {
+              margin-top: -0.75vmax;
               display: flex;
               align-items: center;
             }
@@ -123,11 +121,11 @@ body {
     }
     .layout-right {
       align-items: flex-start;
-      border: 1px solid blue; //debug
       width: 60vw;
+      //border: 1px solid blue; //debug
       .margins {
         height: 75vh;
-        width: 65%;
+        width: 70%;
         margin-left: 5vmax;
         border: 2px solid yellow; //debug
       }

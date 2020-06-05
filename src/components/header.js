@@ -7,7 +7,8 @@ import "./styles.css"
 
 //fa import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { faUser } from "@fortawesome/free-solid-svg-icons"
+import { faAddressCard } from "@fortawesome/free-solid-svg-icons"
 
 //logo import
 import logo from "../images/logo.png"
@@ -35,11 +36,11 @@ const Header = ({ siteTitle }) => {
       </p>
       <nav>
         <Link to="/">
-          <FontAwesomeIcon icon={faCoffee} />
+          <FontAwesomeIcon icon={faUser} />
           <p>Portfolio</p>
         </Link>
         <Link to="/">
-          <FontAwesomeIcon icon={faCoffee} />
+          <FontAwesomeIcon icon={faAddressCard} />
           <p>Contact</p>
         </Link>
       </nav>
