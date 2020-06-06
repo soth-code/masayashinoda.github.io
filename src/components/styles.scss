@@ -6,7 +6,7 @@ $font-heading: "Jacques Francois", serif;
 $font-subhead: "Martel", serif;
 $font-body: "Marcellus", serif;
 $clr-primary: #183152;
-$clr-sceondary: #244979;
+$clr-secondary: #244979;
 $clr-white-darker: #c4d7ed;
 $clr-white: #eef4fb;
 $desktop-bp: 1024px;
@@ -46,18 +46,24 @@ body {
     }
     //link
     a {
-      //border-bottom: 2px solid $clr-white-darker;
       text-decoration: none;
       display: flex;
       align-items: center;
       p {
         margin: 0;
-        margin-left: 0.5vmax;
-        color: saturate($clr-white, 15%);
+        margin-left: 0.75vmax;
+        border-bottom: 1px solid $clr-white-darker;
+      }
+    }
+    a:hover {
+      color: lighten($clr-secondary, 25%);
+      p {
+        color: lighten($clr-secondary, 25%);
+        border-bottom: 1px solid lighten($clr-secondary, 50%);
       }
     }
     a:nth-of-type(even) {
-      margin-left: 1.25vmax;
+      margin-left: 1.75vmax;
     }
     //font color
     h1,
@@ -94,7 +100,7 @@ body {
       .margins-bottom {
         width: 100%;
         height: 25%;
-        background: $clr-sceondary;
+        background: $clr-secondary;
         display: flex;
         justify-content: flex-end;
         div {
@@ -127,7 +133,7 @@ body {
         height: 75vh;
         width: 70%;
         margin-left: 5vmax;
-        border: 2px solid yellow; //debug
+        //border: 5px solid purple; //debug
       }
       @media (max-width: $tablet-bp) {
         .margins {
@@ -135,17 +141,81 @@ body {
         }
       }
     }
+    //mobile layouts
+    @media (max-width: $mobile-bp) {
+      //mobile layout left
+      .layout-left {
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        min-height: 100vh;
+        max-height: 100vh;
+        background: $clr-primary;
+        //border: 1px solid red; //debug
+        .margins {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 75%;
+          width: 90%;
+          //margin-top: 15vh;
+          //border: 2px solid green; //debug
+        }
+        //footer
+        .margins-bottom {
+          height: 25%;
+          background: $clr-secondary;
+          display: flex;
+          //border: 1px solid purple; //debug
+          justify-content: center;
+          div {
+            width: 90%;
+            margin-top: 0.5vmax;
+            justify-content: flex-start;
+            //border: 1px solid yellow; //debug
+            footer {
+              display: flex;
+              flex-direction: column;
+              nav {
+                margin-top: -0.75vmax;
+                display: flex;
+                align-items: center;
+              }
+            }
+          }
+        }
+
+        @media (max-width: $tablet-bp) {
+          .margins {
+            width: 90%;
+          }
+        }
+      }
+      //mobile layout left end
+
+      //mobile layout right start
+      .layout-right {
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        //border: 1px solid blue; //debug
+        .margins {
+          margin-left: 0;
+          width: 90%;
+          border: 2px solid yellow; //debug
+        }
+      }
+      //mobile layout right end
+    }
   }
   @media (max-width: $tablet-bp) {
     .parent {
       flex-direction: column;
-      width: 90%;
     }
   }
   @media (max-width: $mobile-bp) {
     .parent {
       flex-direction: column;
-      width: 90%;
     }
   }
 }
