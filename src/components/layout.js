@@ -42,7 +42,6 @@ const Layout = ({ children }) => {
           content="web designer, web developer, graphics designer, cambodia, phnom penh, graphics designer cambodia, graphics designer phnom penh, web design phnom penh, web design cambodia, web developer cambodia, web developer phnom penh"
         />
       </Helmet>
-      {children}
       <div className="layout-left">
         {" "}
         <div className="margins">
@@ -69,7 +68,7 @@ const Layout = ({ children }) => {
         </div>
       </div>
       <div className="layout-right">
-        <div className="margins"></div>
+        <div className="margins">{children}</div>
       </div>
     </div>
   )
